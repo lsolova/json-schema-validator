@@ -1,0 +1,12 @@
+{
+    "$id": "http://example.com/schemas/test.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "User",
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "age": {"type": "integer", "minimum": 0, "maximum": 130},
+        "email": {"$ref": "http://localhost:8000/public/email.schema.json"}
+    },
+    "required": ["name", "age", "email"]
+}
