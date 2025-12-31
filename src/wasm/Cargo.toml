@@ -1,0 +1,13 @@
+[package]
+name = "jsonschema-wasm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Laszlo Solova <laszlo@solova.com06:40 PM06:40 PM>"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+jsonschema = { version = "0.38.1", default-features = false }
+serde_json = "1.0.148"
+wasm-bindgen = "0.2.106"
