@@ -1,23 +1,22 @@
 # JSON schema validator
 
 This experimental project is to provide a secure JSON schema validation in browser environment. It uses _jsonschema_
-Rust package wrapped into a WASM module and exposing functionality using a Worker and a simple SchemaValidator object.
+Rust package wrapped into a WASM module and exposing functionality within SchemaValidator object.
 
 ## Usage
 
-Copy the following files into your output:
+Copy the following file into your output:
 
 | Parameter | File                                                             |
 |-----------|------------------------------------------------------------------|
-| workerURL | @lsolova/json-schema-validator/dist/assets/worker.js             |
 | wasmURL   | @lsolova/json-schema-validator/dist/assets/schema_validator.wasm |
 
 ```ts
 import { SchemaValidator } from "@lsolova/json-schema-validator";
 
 async function initValidation {
-    // Set the URLs to the URL of the copied files (without origin)
-    await SchemaValidator.init(workerURL, wasmURL);
+    // Set the wasmURL to the URL of the copied WASM file (without origin)
+    await SchemaValidator.init(wasmURL);
 };
 
 async function validate(schemaURL, data) {

@@ -4,7 +4,6 @@ import dtsPlugin from "esbuild-plugin-d.ts";
 
 await esbuild.build({
   entryPoints: {
-    "assets/worker": "script/src/worker/worker.ts",
     "index": "script/src/index.ts",
   },
   outdir: "dist",
@@ -26,4 +25,4 @@ await esbuild.build({
   ],
 });
 
-console.log("Worker build complete!");
+console.log("Package build complete!");
